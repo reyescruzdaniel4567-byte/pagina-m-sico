@@ -1,0 +1,177 @@
+:root {
+    --fondo: #14111f;
+    --superficie: #1f1b30;
+    --borde: #342e4f;
+    --texto: #ece9f7;
+    --texto-suave: #a9a3c4;
+    --acento: #8b5cf6;
+    --acento-2: #f472b6;
+    --verde: #34d399;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+/* Encabezado */
+.encabezado {
+    background: linear-gradient(135deg, var(--acento), var(--acento-2));
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.encabezado h1 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+.seccion {
+    margin-bottom: 40px;
+}
+
+.seccion h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--acento);
+    display: inline-block;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.tarjeta {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 18px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    border-color: var(--acento);
+}
+
+.tarjeta h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.tarjeta p {
+    font-size: 0.92rem;
+    color: var(--texto-suave);
+    margin-bottom: 6px;
+}
+
+.tarjeta-instrumento {
+    border-left: 4px solid var(--acento-2);
+}
+
+.etiqueta {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.vivo {
+    color: var(--verde);
+    font-weight: 600;
+}
+
+
+.insignia {
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 6px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    background: rgba(139, 92, 246, 0.2);
+    color: #c4b5fd;
+}
+
+.insignia-principal {
+    background: rgba(244, 114, 182, 0.2);
+    color: #f9a8d4;
+}
+
+
+.tabla-envoltura {
+    overflow-x: auto;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--superficie);
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.92rem;
+}
+
+.tabla thead th {
+    background: var(--acento);
+    color: #fff;
+}
+
+.tabla tbody tr {
+    border-top: 1px solid var(--borde);
+}
+
+.tabla tbody tr:hover {
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.vacio {
+    color: var(--texto-suave);
+    font-style: italic;
+    padding: 12px;
+}
